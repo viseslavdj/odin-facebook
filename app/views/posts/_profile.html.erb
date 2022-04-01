@@ -1,2 +1,12 @@
 <%= button_to "Log out", destroy_user_session_path, method: :delete %>
 <%= link_to "New post", new_post_path%>
+<br><br>
+<% if current_user.posts.count == 0 %>
+  <%= "No posts yet" %>
+<% else %>
+  <% @posts.each do |post| %>
+    <% if current_user.id == post.user_id%>
+      <%= post.post %><br>
+    <% end %>
+  <% end %>
+<% end %>
