@@ -2,12 +2,12 @@
 
 <h1>Posts of</h1>
 
+
 <div id="posts">
-  <% @posts.each do |post| %>
-    <%= render post %>
-    <p>
-      <%= link_to "Show this post", post %>
-    </p>
+  <% if user_signed_in? %>
+    <%= "Signed" %>
+  <% else %>
+    <%= "First Log in or Sign up" %>
   <% end %>
 </div>
 
