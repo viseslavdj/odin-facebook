@@ -1,0 +1,10 @@
+    <%= stylesheet_link_tag "application" %>
+
+    <header class="entry"> Sign up or Log in first </header>
+    <br>
+    <button class="wpBtn">
+    <%= link_to "Sign up", new_user_registration_path%>
+    </button>
+    <br>
+    <button class="wpBtn"><%= link_to "Log in", user_session_path%>
+    </button>

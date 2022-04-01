@@ -1,14 +1,9 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Posts of</h1>
-
-
 <div id="posts">
   <% if user_signed_in? %>
-    <%= "Signed" %>
+    <%= render 'profile' %>
   <% else %>
-    <%= "First Log in or Sign up" %>
+    <%= render 'anon' %>
   <% end %>
 </div>
-
-<%= link_to "New post", new_post_path %>

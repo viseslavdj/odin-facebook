@@ -13,3 +13,10 @@
  *= require_tree .
  *= require_self
  */
+
+.entry {
+  height: 50px;
+  background-color: palevioletred;
+  color: black;
+}
+
